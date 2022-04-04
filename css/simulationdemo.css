@@ -1,0 +1,217 @@
+/** @format */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* height: 100vh;
+    width: 100vw; */
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+.m-auto {
+    margin: auto;
+}
+.container {
+    width: 90%;
+}
+.m-0 {
+    margin: 0 0 0 0;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.text-black {
+    color: black;
+}
+.text-white {
+    color: white;
+}
+.text-red {
+    color: red;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.bst-text {
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+.absolute {
+    position: absolute;
+}
+.relative {
+    position: relative;
+}
+
+.order-text {
+    font-size: 1.25em;
+}
+
+.d-flex {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-col {
+    flex-direction: column;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.content-start {
+    justify-content: flex-start;
+}
+.content-center {
+    justify-content: center;
+}
+.content-between {
+    justify-content: space-between;
+}
+.align-center {
+    align-items: center;
+}
+.btn-main {
+    margin: 0.5rem 0 0 0;
+}
+.custom-btn {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    font-weight: 700;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    background-color: rgb(37, 99, 235);
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hidden {
+    display: none;
+}
+.btn-animate:hover {
+    background: red;
+}
+
+.main-content {
+    margin: 0.25rem auto 0.25rem auto;
+}
+
+.text-observation {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+.simDemoHints {
+    font-size: 1rem;
+    height: 40px;
+}
+.simDemoOrder {
+    font-size: 1rem;
+    padding: 0.50rem 0.75rem 0 0.75rem;
+    margin: 1rem 0 1frem 0;
+    word-spacing: 0.5rem;
+}
+
+/* simulation  */
+.main-component {
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+.header-instruction-simulation {
+    width: 100%;
+}
+.header-instruction-simulation-inner-div {
+    width: 40%;
+    font-weight: 700;
+}
+.simulation-order {
+    word-spacing: 0.25rem;
+    font-weight: 800;
+}
+
+.tree-canvas {
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+.animation-canvas {
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+
+/* test */
+.btn-test {
+    background-color: rgb(99, 102, 241);
+    border: 2px solid black;
+    font-weight: bolder;
+    border-radius: 0.375rem;
+    padding: 0.35rem 1rem 0.35rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.test-timer {
+    font-weight: bolder;
+}
+.test-result {
+    font-weight: bolder;
+}
+.test-order {
+    font-weight: bolder;
+    word-spacing: 0.75rem;
+}
+.opacity-50 {
+    opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        max-width: 768px;
+    }
+    .header-instruction-simulation-inner-div {
+        width: 40%;
+    }
+    .simulationHints {
+        font-size: 0.50rem;
+        height: 50px;
+    }
+    .simulation-instruction {
+        width: 30%;
+    }
+    .simulation-chance {
+        text-align: right;
+        width: 30%;
+    }
+}
+
+@media (min-width: 640px) {
+    .main-content {
+        max-width: 640px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-instruction-simulation {
+        display: block;
+    }
+    .header-instruction-simulation-inner-div {
+        text-align: left;
+    }
+}

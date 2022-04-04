@@ -1,0 +1,72 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BST Post Order Traversal</title>
+        <link rel="stylesheet" href="css/simulationdemo.css">
+    </head>
+
+    <body>
+        
+        <div class="container m-auto">
+            <div class="text-black text-center bst-text">
+                Binary Search Tree
+            </div>
+            <p class="text-black text-center m-0 order-text">Postorder traversal Demo</p>
+            <div id="simulation" class="d-flex flex-row content-center btn-main">
+                <div id="buttons">
+                    <button class="btn btn-start btn-animate" id="btnStart">
+                        start
+                    </button>
+                    <button
+                        class="btn btn-next btn-animate hidden"
+                        id="btnNext"
+                        onclick=""
+                    >
+                        next
+                    </button>
+                    <button
+                        class="btn btn-next btn-animate hidden"
+                        id="btnRestart"
+                        onclick=""
+                    >
+                        restart
+                    </button>
+                </div>
+            </div>
+
+            <div class="d-flex flex-col justify-center align-center main-content" id="main-content" >
+                <div id="demoInstruction" class="">
+                    <h5 class="text-center m-0 text-observation">Observation</h5>
+                    <div id="demoHints" class="text-center m-0 simDemoHints">
+                        Click the Start button to Start the Postorder Traversal demo.
+                    </div>
+                    <div id="demoOrder" class="text-center simDemoOrder">&nbsp;</div>
+                </div>
+                <div class="">
+                    <canvas id="canvas"  class="text-center"> 
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="lab-footer"></div>
+        <!-- <script src="output_dirs/api/connectdb.js" ></script> -->
+        <script src="output_dirs/confetti.js"></script>
+        <script src="output_dirs/constants.js"></script>
+        <script src="output_dirs/Canvas.js"></script>
+        <script src="output_dirs/BezierCurve.js"></script>
+        <script src="output_dirs/Circle.js"></script>
+        <script src="output_dirs/BinarySearchTreeNode.js" ></script>
+        <script src="output_dirs/treeUtilities.js" ></script>
+        <script src="output_dirs/connectPointsWithBezierCurve.js"></script>
+        <script src="output_dirs/drawSimpleBinaryTree.js" ></script>
+        <script src="output_dirs/drawBinaryTree.js" ></script>
+        <script src="output_dirs/globals.js"></script>
+        <script src="output_dirs/PostOrderDemo.js" defer></script>
+    </body>
+</html>
