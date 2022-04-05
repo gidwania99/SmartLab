@@ -98,7 +98,7 @@ body {
     border-width: 2px;
     border-radius: 0.375rem;
     cursor: pointer;
-    font-size: 100%;
+    font-size: 16px;
 }
 
 .hidden {
@@ -113,14 +113,16 @@ body {
 }
 
 .text-observation {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.25rem;
 }
 .simDemoHints {
+    font-size: 1rem;
     height: 40px;
 }
 .simDemoOrder {
-    padding: 0 0.75rem 0 0.75rem;
+    font-size: 1rem;
+    padding: 0.50rem 0.75rem 0 0.75rem;
     margin: 1rem 0 1frem 0;
     word-spacing: 0.5rem;
 }
@@ -134,14 +136,19 @@ body {
     width: 100%;
 }
 .header-instruction-simulation-inner-div {
-    width: 40%;
-    font-weight: 700;
+    /* width: 40%; */
+    font-size: 1rem;
+    font-weight: 500;
 }
 .simulation-order {
     word-spacing: 0.25rem;
-    font-weight: 800;
+    font-weight: 500;
+    font-size: 1rem;
 }
-
+.simulation-chance {
+    font-weight: 500;
+    font-size: 1rem;
+}
 .tree-canvas {
     left: 0;
     right: 0;
@@ -152,6 +159,7 @@ body {
     right: 0;
     z-index: 0;
 }
+
 
 /* test */
 .btn-test {
@@ -177,23 +185,44 @@ body {
 .opacity-50 {
     opacity: 0.5;
 }
+.simulatioHints{
+    text-align: center;
+    height: 50px;
+   
+} 
+.simulation-order{
+    margin-top: 50px;
+    word-spacing: 0.25rem;
+    font-weight:800;
+   
+ 
+}
+
+.canvas-footer{
+    position:absolute;
+    bottom:0;
+
+    margin-left: 3rem;
+    margin-right: auto;
+}
 
 @media (min-width: 768px) {
     .main-content {
         max-width: 768px;
     }
-    .header-instruction-simulation-inner-div {
+   /*  .header-instruction-simulation-inner-div {
         width: 40%;
     }
     .simulationHints {
+        font-size: 0.50rem;
         height: 50px;
     }
     .simulation-instruction {
         width: 30%;
-    }
+    } */
     .simulation-chance {
         text-align: right;
-        width: 30%;
+       /*  width: 30%; */
     }
 }
 
@@ -207,7 +236,10 @@ body {
     .header-instruction-simulation {
         display: block;
     }
-    .header-instruction-simulation-inner-div {
+  /*   .header-instruction-simulation-inner-div {
         text-align: left;
+    } */
+    .simulatioHints{
+        font-size: smaller;
     }
 }

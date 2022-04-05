@@ -68,12 +68,36 @@ function drawSimpleBinaryTree(
 
   
   // Init calculation
-  var midPoint = 0
-  if(screen.width > 600 && screen.width < 992)
-    midPoint =  2.5;
-   else{
-     midPoint = 2.2;
-   }
+  var midPoint = 2
+  //  if(screen.width > 600 && screen.width < 992){
+  //   console.log("600");
+  //   midPoint =  2.5;
+  //  }
+  //  else{
+  //   console.log("992");
+  //    midPoint = 2.2;
+  //  } 
+  // For Mobile devices: 320px-480px
+  // For Tablets or iPad: 480px - 768px
+  // For Laptop or small-size screen: 768px -1024px
+  // For Desktop or large-size screen: 1024px -1200px
+  // For Extra-large size device: 1200px and more
+  if(screen.width >= 320 && screen.width < 480){
+    console.log("600");
+    midPoint =  2;
+  }else if(screen.width >= 480 && screen.width < 768){
+    midPoint = 2
+  }
+  else if(screen.width >= 768 && screen.width <= 1024){
+    midPoint = 2
+  }
+  else if(screen.width >= 1024 && screen.width < 1200){
+    midPoint = 2
+  }
+  else{
+    console.log("992");
+     midPoint = 2;
+   } 
    const midPointInCanvas = maxWidth / midPoint;
   const xStart = (midPointInCanvas - maxWidth / 2.5) +
     FIXED_VALUE.leafNodeSpace;

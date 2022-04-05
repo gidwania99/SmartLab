@@ -3,6 +3,7 @@ function drawBinaryTree(
     root: BinarySearchTreeNode,
     canvasElement: HTMLCanvasElement,
 ) {
+ 
    
     var isInsert : boolean = false;
     var path = window.location.pathname;
@@ -14,5 +15,6 @@ function drawBinaryTree(
 
   
     drawSimpleBinaryTree(root, canvasElement,maxHeight,maxWidth);
+  
 }
 
