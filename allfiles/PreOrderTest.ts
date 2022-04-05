@@ -14,15 +14,15 @@ var testTimer: HTMLSpanElement = <HTMLSpanElement>document.getElementById("testT
 
 var modalTitle: HTMLDivElement = <HTMLDivElement>document.getElementById('modalTitle')
 var modalText: HTMLDivElement = <HTMLDivElement>document.getElementById('modalText');
-var modalNewButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById('modalNewButton')
-var modalRestartButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById('modalRestartButton')
+//var modalNewButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById('modalNewButton')
+//var modalRestartButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById('modalRestartButton')
 
 var seconds: number = 0;
 var mins: number = 3;
 var intervalID;
 
 
-modalNewButton.onclick = () => {
+/*modalNewButton.onclick = () => {
     stopConfettiInner();
     btnTestStart.disabled = true;
     if (btnTestStart.disabled)
@@ -49,7 +49,7 @@ modalRestartButton.onclick = () => {
     count = 0;
     startTimer();
 
-}
+}*/
 
 
 btnTestStart.onclick = function () {
