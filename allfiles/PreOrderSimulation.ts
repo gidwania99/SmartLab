@@ -38,7 +38,6 @@ canvas.addEventListener('mousedown', function (e) {
 
 
 function writeInstructionPreorder(message1, message2, err?) {
-   
     if (err && err != "done") {
         hint1.innerHTML = "<b style='color:red'>" + message1 + "</b>";
         hint2.innerHTML = "<span>" + message2 + "</span>";
@@ -48,7 +47,7 @@ function writeInstructionPreorder(message1, message2, err?) {
         hint1.innerHTML = "<b style='color:green'>" + message1 + "</b>";
         hint2.innerHTML = "<span>" + message2 + "</span>";
         if (err != "done") {
-            hint3.innerHTML = "<span>Select Next Node.</span>";
+            hint3.innerHTML = "<span>Select Next Node</span>";
         } else {
             hint3.innerHTML = "";
         }
@@ -72,27 +71,14 @@ function writeSimulationInstructionsPreorder(node: BinarySearchTreeNode) {
         else if(node.value<node.parent.value){
 
             if(preOrderNodeList[counter].value < root.value && preOrderNodeList[counter + 1].value > root.value)
-            {
-               // console.warn("hii= "+canvasComponent.width());
-               // if(canvasComponent.width()>550)
-                    writeInstructionPreorder("Correct!", node.value + " is the left child of "+node.parent.value+"."+"<br>The left subtree of root node " + root.value + " is completed.", false);
-               // else
-                  //  writeInstructionPreorder("Correct!", node.value + " is the left child of "+node.parent.value+"."+"The left subtree of root node " + root.value + " is completed.", false);
-                   
-            }
+                writeInstructionPreorder("Correct!", node.value + " is the left child of "+node.parent.value+"."+"<br>The left subtree of " + root.value + " is completed.", false);
             else
                 writeInstructionPreorder("Correct!", node.value + " is the left child of "+node.parent.value+".", false); 
 
         }
         else if(node.value>node.parent.value){
             if(preOrderNodeList[counter].value < root.value && preOrderNodeList[counter + 1].value > root.value)
-            {
-                //if(canvasComponent.width()>550)
-                    writeInstructionPreorder("Correct!", node.value + " is the right child of "+node.parent.value+"."+"<br>The left subtree of " + root.value + " is completed.", false);
-               // else
-               //  writeInstructionPreorder("Correct!", node.value + " is the right child of "+node.parent.value+"."+"The left subtree of " + root.value + " is completed.", false);
-
-            }
+                writeInstructionPreorder("Correct!", node.value + " is the right child of "+node.parent.value+"."+"<br>The left subtree of " + root.value + " is completed.", false);
             else
                 writeInstructionPreorder("Correct!", node.value + " is the right child of "+node.parent.value+".", false); 
 

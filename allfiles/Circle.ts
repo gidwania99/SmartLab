@@ -99,28 +99,6 @@ class Circle {
     getCoordinates() : [number,number] {
         return [this.x,this.y];
     }
-    getCordinates():Point{
-        return new Point(this.x,this.y);
-    }
-    get X(){
-        return this.x;
-    }
-    get Y(){
-        return this.y;
-    }
-    incrementX(){
-        this.x++;
-        
-    }
-    incrementY(){
-        this.y++;
-    }
-    decrementX(){
-        this.x--;
-    }
-    decrementY(){
-        this.y--;
-    }
 
     draw(comp: CanvasComponent) {
         // const { radius , fillColor } = this;

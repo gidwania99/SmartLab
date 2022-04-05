@@ -74,18 +74,14 @@ function writeSimulationInstructions(node: BinarySearchTreeNode) {
         }
             
         else if(node.value<  postOrderNodeList[counter-1].value){
-            if (postOrderNodeList[counter].value < root.value && postOrderNodeList[counter + 1].value >= root.value)
-                writeInstruction("Correct!", node.value + " is the parent of " + postOrderNodeList[counter-1].value + "." + "<br>The left subtree of root node " + root.value + " is completed.", false);
-            else
-                writeInstruction("Correct!", node.value + " is the parent of " + postOrderNodeList[counter-1].value + ".", false);
+            writeInstruction("Correct!", node.value + " is the parent of " + postOrderNodeList[counter-1].value + ".", false);
 
         }
         else if (node.value > postOrderNodeList[counter-1].value ) {
 
-           
             if(node==postOrderNodeList[counter-1].parent){
-                if (postOrderNodeList[counter].value < root.value && postOrderNodeList[counter + 1].value >= root.value)
-                    writeInstruction("Correct!", node.value + " is the right child of " + postOrderNodeList[counter-1].value + "." + "<br>The left subtree of root node " + root.value + " is completed.", false);
+                if (postOrderNodeList[counter].value < root.value && postOrderNodeList[counter + 1].value > root.value)
+                    writeInstruction("Correct!", node.value + " is the right child of " + postOrderNodeList[counter-1].value + "." + "<br>The left subtree of " + root.value + " is completed.", false);
                 else
                     writeInstruction("Correct!", node.value + " is the right child of " + postOrderNodeList[counter-1].value + ".", false);
 
@@ -93,8 +89,8 @@ function writeSimulationInstructions(node: BinarySearchTreeNode) {
             else{
 
                 if(node.left!=null){
-                    if (postOrderNodeList[counter].value < root.value && postOrderNodeList[counter + 1].value >= root.value)
-                        writeInstruction("Correct!", node.value + " is the parent of " + node.left.value + "." + "<br>The left subtree of root node " + root.value + " is completed.", false);
+                    if (postOrderNodeList[counter].value < root.value && postOrderNodeList[counter + 1].value > root.value)
+                        writeInstruction("Correct!", node.value + " is the parent of " + node.left.value + "." + "<br>The left subtree of " + root.value + " is completed.", false);
                     else
                         writeInstruction("Correct!", node.value + " is the parent of " + node.left.value + ".", false);
                 }

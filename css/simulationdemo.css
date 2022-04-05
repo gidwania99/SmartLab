@@ -98,7 +98,7 @@ body {
     border-width: 2px;
     border-radius: 0.375rem;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 100%;
 }
 
 .hidden {
@@ -117,12 +117,10 @@ body {
     font-size: 1.25rem;
 }
 .simDemoHints {
-    font-size: 1rem;
     height: 40px;
 }
 .simDemoOrder {
-    font-size: 1rem;
-    padding: 0.50rem 0.75rem 0 0.75rem;
+    padding: 0 0.75rem 0 0.75rem;
     margin: 1rem 0 1frem 0;
     word-spacing: 0.5rem;
 }
@@ -154,7 +152,6 @@ body {
     right: 0;
     z-index: 0;
 }
-
 
 /* test */
 .btn-test {
@@ -189,7 +186,6 @@ body {
         width: 40%;
     }
     .simulationHints {
-        font-size: 0.50rem;
         height: 50px;
     }
     .simulation-instruction {

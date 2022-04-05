@@ -19,11 +19,11 @@ function getCanvasHeightFromTreeHeight(treeHeight: number) {
 }
 
 
-function generateTree(type?:String): void {
+function generateTree(type:String): void {
   canvasComponent.clearCanvas();
   root = null;
   randomNumber = Math.floor(Math.random() * 10) + 0;
-  //randomNumber = 10 ;
+ // randomNumber = 3 ;
   if(type == 'demo')
     tree = demoTree[randomNumber];
   else if(type == 'sim')

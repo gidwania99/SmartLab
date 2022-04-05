@@ -69,20 +69,19 @@ function writeSimulationInstructionsInorder(node: BinarySearchTreeNode) {
     if (node == rightAns) {
         if (counter == 0)
             writeInstructionInorder("Correct!", node.value + " is the leftmost node.", false);
-        
+            
         else if (node.value > inorderNodeList[counter-1].value ) {
 
             if(node.parent==inorderNodeList[counter-1]){
-               
-                if (inorderNodeList[counter].value < root.value && inorderNodeList[counter + 1].value== root.value)
-                    writeInstructionInorder("Correct!", node.value + " is the right child of " + inorderNodeList[counter-1].value + "." + "<br>The left subtree of root node " + root.value + " is completed.", false);
+                if (inorderNodeList[counter].value < root.value && inorderNodeList[counter + 1].value > root.value)
+                    writeInstructionInorder("Correct!", node.value + " is the right child of " + inorderNodeList[counter-1].value + "." + "<br>The left subtree of " + root.value + " is completed.", false);
                 else
                     writeInstructionInorder("Correct!", node.value + " is the right child of " + inorderNodeList[counter-1].value + ".", false);
 
             }
             else{
                 if(node.left!=null){
-                    if (inorderNodeList[counter].value < root.value && inorderNodeList[counter + 1].value == root.value)
+                    if (inorderNodeList[counter].value < root.value && inorderNodeList[counter + 1].value > root.value)
                         writeInstructionInorder("Correct!", node.value + " is the parent of " + node.left.value + "." + "<br>The left subtree of " + root.value + " is completed.", false);
                     else
                         writeInstructionInorder("Correct!", node.value + " is the parent of " + node.left.value + ".", false);

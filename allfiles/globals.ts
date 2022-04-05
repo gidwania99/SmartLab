@@ -25,7 +25,6 @@ var demoTree: number[][] = [
   [21, 14, 18, 17, 4, 9, 3, 33, 36, 30, 28],
   [20, 14, 15, 16, 28, 36, 14, 27, 26, 12],
   [13, 7, 9, 6, 3, 15, 20, 14, 8, 12, 14, 16]
-  
 ];
 
 var simTree: number[][] = [
@@ -57,11 +56,6 @@ var testTree: number[][] = [
 let randomNumber: number;
 let tree: number[];
 
-function mainDeletion(){
-  canvasComponent.resizeCanvas();
-  generateTree("demo");
-  drawBinaryTree(root, canvas);
-}
 
 function mainPreorder(type: String) {
   preOrderNodeList = [];

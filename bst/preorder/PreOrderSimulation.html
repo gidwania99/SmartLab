@@ -18,14 +18,37 @@
     <p class="text-black text-center m-0 order-text">Preorder traversal Simulation </p>
 
 
-     
+     <div id="myModal" aria-hidden="true" class="hidden flex overflow-y-auto overflow-x-hidden  right-4 left-4 top-0  z-50 justify-center items-center fixed  h-modal  md:inset-0">
+            <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+
+                    <div class="flex justify-between items-start p-5 rounded-t border-b dark:border-gray-600">
+                        <h3 class="text-xl font-semibold text-gray-900 lg:text-2xl dark:text-white" id="modalTitle">
+                        </h3>
+                       
+                    </div>
+
+                    <div class="p-6 space-y-6">
+                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400" id="modalText">
+                        </p>
+                    </div>
+
+                    <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 ">
+                        <button  type="button" class="text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-5 py-2.5 text-center" id="retryModal">Close</button>
+                        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 rounded lg text-sm px-5 py-2.5 text-center" id="learnModal">Close</button>
+                        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 rounded lg text-sm px-5 py-2.5 text-center" id="testModal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
 
 
     <div class="mx-auto main-component" id="main-component">
-      <div id="instructionsimulation" class=" content-start header-instruction-simulation">
-        <div id="isdiv"class="header-instruction-simulation-inner-div">
+      <div id="instructionsimulation" class="d-flex flex-row flex-wrap content-start header-instruction-simulation">
+        <div id="isdiv"class="text-left header-instruction-simulation-inner-div">
           <h5 class="text-center m-0 text-observation">Observation</h5>
           <div id="hint" class="text-center simulatioHints">
             <span id="hint1">Click on node to start Preorder traversal simulation.</span><br>
@@ -48,30 +71,6 @@
 
 
     </div>
-    <div id="myModal" aria-hidden="true" class="hidden ">
-      <div class="">
-          <div class=" bg-white rounded-lg shadow dark:bg-gray-700">
-
-              <div class="  items-start p-5 rounded-t border-b dark:border-gray-600">
-                  <h3 class="text-xl font-semibold text-gray-900 lg:text-2xl dark:text-white" id="modalTitle">
-                  </h3>
-                 
-              </div>
-
-              <div class="p-6 space-y-6">
-                  <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400" id="modalText">
-                  </p>
-              </div>
-
-              <div class=" items-center p-6 space-x-2 rounded-b border-t border-gray-200 ">
-                  <button  type="button" class="text-white bg-blue-700 hover:bg-blue-800 rounded-lg text-sm px-5 py-2.5 text-center" id="retryModal">Close</button>
-                  <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 rounded lg text-sm px-5 py-2.5 text-center" id="learnModal">Close</button>
-                  <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 rounded lg text-sm px-5 py-2.5 text-center" id="testModal">Close</button>
-              </div>
-          </div>
-      </div>
-  </div>
-
     <div class="simulation-footer" id="lab-footer"></div>
 
 
