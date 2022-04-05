@@ -181,6 +181,7 @@ body {
 .test-order {
     font-weight: bolder;
     word-spacing: 0.75rem;
+    font-size: large;
 }
 .opacity-50 {
     opacity: 0.5;
