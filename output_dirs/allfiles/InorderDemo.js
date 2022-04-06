@@ -31,6 +31,12 @@ writeInorderRules();
 btnRestartInorder.onclick = inorder;
 btnStartInorder.onclick = inorder;
 function inorder() {
+    btnNext.disabled = true;
+    btnNext.classList.add('opacity-50');
+    setTimeout(() => {
+        btnNext.disabled = false;
+        btnNext.classList.remove('opacity-50');
+    }, 2000);
     demoOrderInorder.innerHTML = "<b>Inorder :</b>";
     inOrderManually(root);
 }

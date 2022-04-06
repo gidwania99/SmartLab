@@ -23,13 +23,13 @@ modalNewButton.onclick = () => {
         btnTestStart.classList.add('opacity-50');
     preOrderNodeList = [];
     mainPreorder('test');
-    removeModal();
+    document.getElementById("myModal").style.display = "none";
     testResult.innerHTML = "Click Node to Start PostOrder TestClick Node to Start PreOrder traversal Test";
     testOrder.innerHTML = "<div>&nbsp;</div>";
     startTimer();
 };
 modalRestartButton.onclick = () => {
-    removeModal();
+    document.getElementById("myModal").style.display = "none";
     testResult.innerHTML = "Click Node to Start PreOrder traversal Test";
     testOrder.innerHTML = "<div>&nbsp;</div>";
     btnTestStart.disabled = true;
@@ -44,6 +44,7 @@ modalRestartButton.onclick = () => {
     startTimer();
 };
 btnTestStart.onclick = function () {
+    document.getElementById("myModal").style.display = "none";
     btnTestStart.disabled = true;
     if (btnTestStart.disabled)
         btnTestStart.classList.add('opacity-50');
@@ -120,50 +121,6 @@ function checkResultPreorder(isTimeOver = false) {
         modalRestartButton.innerHTML = "Restart Test";
         modalNewButton.style.display = "none";
     }
+    document.getElementById("myModal").style.display = "block";
 }
-/* function startTimer(){
-
-    intervalID = setInterval(function(){
-         if(seconds == 0){
-             mins-=1;
-             seconds = 60;
-         }
-         seconds--;
-         testTimer.innerHTML = "Time Left : "+ (mins < 10 ? "0"+mins : mins) + ":" + (seconds  < 10 ? "0"+seconds : seconds);
-         if(mins == 0 && seconds == 0){
-            resetTimerPreorder(true);
-            
-          }
-  
-    },1000);
-  }
-   */
-/* function addNodeToListPreorder(node: BinarySearchTreeNode) {
-    testOrder.innerHTML = "Selected Nodes : ";
-
-    if (!node.isLocked) {
-        node.isLocked = true;
-        node.nodeCircle.setNodeColor(FIXED_VALUE.animateBorderColor, FIXED_VALUE.animateFillColor, FIXED_VALUE.animateTextColor);
-        node.nodeCircle.draw(canvasComponent);
-        userAnsList[count] = node;
-        count++;
-    } else if(node==userAnsList[count-1]) {
-        node.isLocked = false;
-        count--;
-        node.nodeCircle.setDefault();
-        node.nodeCircle.draw(canvasComponent);
-        removeNodeFromAnswerListPreorder(node.value);
-
-    }
-    for (var i = 0; i < userAnsList.length; i++) {
-        testOrder.innerHTML += "<b>" + userAnsList[i].value + "</b> ";
-    }
-}
-function removeNodeFromAnswerListPreorder(value: number) {
-    for (var i = 0; i < userAnsList.length; i++) {
-        if (userAnsList[i].value == value) {
-            userAnsList.splice(i, 1);
-        }
-    }
-} */ 
 //# sourceMappingURL=PreOrderTest.js.map

@@ -20,13 +20,13 @@ modalNewButton.onclick = () => {
     btnTestStart.disabled = true;
     inorderNodeList = [];
     mainInorder('test');
-    removeModal();
+    document.getElementById("myModal").style.display = "none";
     testResult.innerHTML = "Click Node to Start Test";
     testOrder.innerHTML = "<div>&nbsp;</div>";
     startTimer();
 };
 modalRestartButton.onclick = () => {
-    removeModal();
+    document.getElementById("myModal").style.display = "none";
     testResult.innerHTML = "Click Node to Start Test";
     testOrder.innerHTML = "<div>&nbsp;</div>";
     btnTestStart.disabled = true;
@@ -114,5 +114,6 @@ function checkResultInorder(isTimeOver = false) {
         modalRestartButton.innerHTML = "Restart Test";
         modalNewButton.style.display = "none";
     }
+    document.getElementById("myModal").style.display = "block";
 }
 //# sourceMappingURL=InorderTest.js.map

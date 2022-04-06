@@ -183,7 +183,7 @@ function writeSimulationInstructions(node) {
 }
 learnModal.onclick = function () {
     removeModal();
-    window.location.href = "PostOrderSimulationDemo.html";
+    window.location.href = "PostOrderDemo.html";
 };
 testModal.onclick = function () {
     removeModal();

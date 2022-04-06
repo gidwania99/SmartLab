@@ -7,8 +7,6 @@ var hint1 = document.getElementById("hint1");
 var hint2 = document.getElementById("hint2");
 var hint3 = document.getElementById("hint3");
 var simulationOrder = document.getElementById("simulationOrder");
-// var modalTitle: HTMLDivElement = <HTMLDivElement>document.getElementById('modalTitle')
-// var modalText: HTMLDivElement = <HTMLDivElement>document.getElementById('modalText');
 var retryModal = document.getElementById('retryModal');
 var learnModal = document.getElementById('learnModal');
 var testModal = document.getElementById('testModal');
@@ -44,31 +42,18 @@ function writeInstructionPreorder(message1, message2, err) {
 }
 function writeSimulationInstructionsPreorder(node) {
     if (node == preOrderNodeList[counter]) {
-        /*  if (preOrderNodeList[counter].value < root.value && preOrderNodeList[counter + 1].value > root.value)
-             writeInstructionPreorder("Correct!", node.value + " is the root node.<br>The left subtree of " + root.value + " is completed.", false);
-         else
-             writeInstructionPreorder("Correct!", node.value + " is the root node.", false); */
-        // writeInstructionPreorder("LEFT IS DONE!!",false);
         if (counter == 0)
             writeInstructionPreorder("Correct!", node.value + " is the root node.", false);
         else if (node.value < node.parent.value) {
             if (preOrderNodeList[counter].value < root.value && preOrderNodeList[counter + 1].value > root.value) {
-                // console.warn("hii= "+canvasComponent.width());
-                // if(canvasComponent.width()>550)
                 writeInstructionPreorder("Correct!", node.value + " is the left child of " + node.parent.value + "." + "<br>The left subtree of root node " + root.value + " is completed.", false);
-                // else
-                //  writeInstructionPreorder("Correct!", node.value + " is the left child of "+node.parent.value+"."+"The left subtree of root node " + root.value + " is completed.", false);
             }
             else
                 writeInstructionPreorder("Correct!", node.value + " is the left child of " + node.parent.value + ".", false);
         }
         else if (node.value > node.parent.value) {
-            if (preOrderNodeList[counter].value < root.value && preOrderNodeList[counter + 1].value > root.value) {
-                //if(canvasComponent.width()>550)
+            if (preOrderNodeList[counter].value < root.value && preOrderNodeList[counter + 1].value > root.value)
                 writeInstructionPreorder("Correct!", node.value + " is the right child of " + node.parent.value + "." + "<br>The left subtree of " + root.value + " is completed.", false);
-                // else
-                //  writeInstructionPreorder("Correct!", node.value + " is the right child of "+node.parent.value+"."+"The left subtree of " + root.value + " is completed.", false);
-            }
             else
                 writeInstructionPreorder("Correct!", node.value + " is the right child of " + node.parent.value + ".", false);
         }
@@ -124,13 +109,16 @@ function writeSimulationInstructionsPreorder(node) {
 }
 learnModal.onclick = function () {
     // removeModal();
+    document.getElementById("myModal").style.display = "none";
     window.location.href = "PreOrderDemo.html";
 };
 testModal.onclick = function () {
+    document.getElementById("myModal").style.display = "none";
     // removeModal();
     window.location.href = "PreOrderTest.html";
 };
 retryModal.onclick = function () {
+    document.getElementById("myModal").style.display = "none";
     // removeModal();
     stopConfettiInner();
     hint1.innerHTML = "<span>Click on Node to Start PreOrder Simulation</span>";

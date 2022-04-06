@@ -18,6 +18,7 @@ var seconds = 0;
 var mins = 3;
 var intervalID;
 modalNewButton.onclick = () => {
+    document.getElementById("myModal").style.display = "none";
     stopConfettiInner();
     btnTestStart.disabled = true;
     if (btnTestStart.disabled)
@@ -30,6 +31,7 @@ modalNewButton.onclick = () => {
     startTimer();
 };
 modalRestartButton.onclick = () => {
+    document.getElementById("myModal").style.display = "none";
     removeModal();
     testResult.innerHTML = "Click Node to Start PostOrder Test";
     testOrder.innerHTML = "<div>&nbsp;</div>";
@@ -45,6 +47,7 @@ modalRestartButton.onclick = () => {
     startTimer();
 };
 btnTestStart.onclick = function () {
+    document.getElementById("myModal").style.display = "none";
     btnTestStart.disabled = true;
     if (btnTestStart.disabled)
         btnTestStart.classList.add('opacity-50');
@@ -142,5 +145,6 @@ function checkResult(isTimeOver = false) {
         modalRestartButton.innerHTML = "Restart Test";
         modalNewButton.style.display = "none";
     }
+    document.getElementById("myModal").style.display = "block";
 }
 //# sourceMappingURL=PostOrderTest.js.map

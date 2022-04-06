@@ -139,6 +139,7 @@ function redirecting(success = false) {
         modalText.innerHTML = "You couldn't Complete simulation Within 3 Attempts!! ";
         modalText.innerHTML += "<br/>You can retry or learn again in demo.";
         retryModal.innerHTML = "Retry";
+        learnModal.style.display = 'block';
         learnModal.innerHTML = "Learn in Demo";
         testModal.style.display = 'none';
     }
