@@ -112,9 +112,13 @@ body {
     margin: 0.25rem auto 0.25rem auto;
 }
 
-.text-observation {
+.text-observation{
     font-weight: 500;
     font-size: 1.25rem;
+}
+.test-timer{
+    font-weight: 500;
+    font-size: 1rem;
 }
 .simDemoHints {
     font-size: 1rem;
@@ -152,13 +156,43 @@ body {
 .tree-canvas {
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 0;
 }
 .animation-canvas {
     left: 0;
     right: 0;
-    z-index: 0;
+    z-index: -1;
 }
+.modal-container{
+    background-color: transparent;
+    border: 2px solid black;
+    box-sizing: border-box;
+    box-shadow:4px 4px 7px  5px rgba(0,0,0,0.3);
+ 
+}
+.canvas-footer{
+    position: relative;
+    margin: 0;
+    /* background-color: #eaeaea; */
+    text-align: center;
+    z-index: -2 ;
+    font-size: 1rem;
+ 
+} 
+.canvas-footer-button{
+    display: flex;
+    justify-content: center;
+    /* background-color: #eaeaea; */
+    z-index: 2;
+ 
+}
+.canvas-footer-button button{
+    /* position: static; */
+    margin: 1rem;
+    /* z-index: 1; */
+}
+ 
+ 
 
 
 /* test */
@@ -199,13 +233,6 @@ body {
  
 }
 
-.canvas-footer{
-    position:absolute;
-    bottom:0;
-
-    margin-left: 3rem;
-    margin-right: auto;
-}
 
 @media (min-width: 768px) {
     .main-content {
