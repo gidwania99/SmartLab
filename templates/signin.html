@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Python Flask MongoDB Login Register logout with Jquery ajax and password hash</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="/">Home</a></li>
+                    <li role="presentation"><a href="/login">Sign In</a></li>
+                    <li role="presentation"><a href="/signUp">Sign Up</a></li>
+                </ul>
+            </nav>
+            <img src="/static/images/Flask_Icon.png" alt="Flask_Icon.png"/ > 
+        </div>
+      <div class="jumbotron">
+        <h2>Python Flask MongoDB Login Register logout with Jquery ajax and password hash</h2>
+        {% if error %}
+          <div class="alert alert-danger">{{error}}</div>
+        {% endif %}
+        <form class="form-signin" action="/login" method="post">
+        <p><label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus></p>
+        <p><label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required></p>
+          
+        <p><button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button></p>
+      </form>
+      </div>
+        <footer class="footer">
+            <p>©tutorial101.blogspot.com</p>
+        </footer>
+    </div>
+  </body>
+</html>
