@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Sign up</title>
+        <link href="/static/css/style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/static/js/signUp.js"></script>
+    </head>
+    <body>
+        <form action="/login" method="POST">
+            <div class="login">
+                <div class="login-form">
+                    <div class="login-header">
+                        <h1>Sign up</h1>
+                    </div><br>
+
+                    <h3>First Name:</h3>
+                    <input type="text" name="fname" id="fname" placeholder="First Name" required/><br>
+                    <h3>Last Name:</h3>
+                    <input type="text" name="lname" id="lname" placeholder="Last Name"/><br>
+                    <h3>Username:</h3>
+                    <input type="email" name="inputEmail" id="inputEmail" placeholder="Email address" required autofocus/><br>
+                    <h3>Password:</h3>
+                    <input type="password" name="inputPassword" id="inputPassword" placeholder="Password" required/>
+                    <br>
+                    <div id='message'></div>
+                    <button id="btnSignUp" class="login-button" type="button">Sign up </button>
+                    <br><br>
+                    <label class="sign-up">Already have an account?</label>
+                    <a href="/templates/signin.html" class="sign-up">Sign In!</a>
+                    
+                    
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
