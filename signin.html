@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Sign in</title>
+        <link rel="stylesheet" href="css/loginStyle.css"/>
+    </head>
+    <body>
+        <form action="/login" method="POST">
+            <div class="login">
+                <div class="login-form">
+                    <div class="login-header">
+                        <h1>Login</h1>
+                    </div><br>
+                    
+                    <h3>Username:</h3>
+                    <input type="email" name="inputEmail" id="inputEmail" placeholder="Email address" required autofocus/><br>
+                    <h3>Password:</h3>
+                    <input type="password" name="inputPassword" id="inputPassword" placeholder="Password" required/>
+                    <br>
+                    <div class="" id="error"></div>
+                    <button id="btnSignIn" class="login-button" type="submit">Sign in </button>
+                    <br><br>
+                    <a href="" class="forgot-pass">Forgot Password?</a>
+                    <br><br>
+                    <label class="sign-up">Don't have an account?</label>
+                    <a href="signup.html" class="sign-up">Sign Up!</a>
+                    
+                    
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
